@@ -19,9 +19,67 @@ body {
   color: #48556a;
 }
 
-.container {
+.contain {
   width: clamp(330px, 88%, 730px);
   height: 280px;
+  position: relative;
+}
+
+.contain .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 37px;
+  width: 250px;
+  height: 55px;
+  background: lightskyblue;
+  position: absolute;
+  top: 135px;
+  right: -68px;
+  z-index: 100;
+  border-radius: 10px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.contain .box span {
+  font-size: 1.25rem;
+}
+
+.contain .box::before, .contain .box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background: lightskyblue;
+  width: 11px;
+  height: 16.5px;
+}
+
+.contain .box::before {
+  -webkit-transform: translate(calc(-50% + 2px), -62%) rotateZ(-135deg);
+          transform: translate(calc(-50% + 2px), -62%) rotateZ(-135deg);
+  z-index: 3;
+}
+
+.contain .box::after {
+  -webkit-transform: translate(calc(-50% + -2px), -62%) rotateZ(135deg);
+          transform: translate(calc(-50% + -2px), -62%) rotateZ(135deg);
+  z-index: 3;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   background: #fff;
   overflow: hidden;
@@ -91,5 +149,10 @@ body {
 
 .user {
   padding-left: 15px;
+}
+
+.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 /*# sourceMappingURL=main.css.map */
