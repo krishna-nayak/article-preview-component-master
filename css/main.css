@@ -9,10 +9,10 @@
 }
 
 body {
-  height: 100vh;
   display: -ms-grid;
   display: grid;
   place-items: center;
+  height: 100vh;
   background-color: #ecf2f8;
   font-family: "Manrope", sans-serif;
   font-size: 13px;
@@ -38,7 +38,9 @@ body {
   padding: 10px 37px;
   width: 250px;
   height: 55px;
-  background: lightskyblue;
+  background: #6d7f97;
+  color: white;
+  font-weight: 100;
   position: absolute;
   top: 135px;
   right: -68px;
@@ -54,13 +56,25 @@ body {
   font-size: 1.25rem;
 }
 
+.contain .box span .facebook:hover {
+  color: #4267b2;
+}
+
+.contain .box span .twitter:hover {
+  color: #1da1f2;
+}
+
+.contain .box span .pinterest:hover {
+  color: #e60023;
+}
+
 .contain .box::before, .contain .box::after {
   content: "";
   display: block;
   position: absolute;
   top: 100%;
   left: 50%;
-  background: lightskyblue;
+  background: inherit;
   width: 11px;
   height: 16.5px;
 }
@@ -152,7 +166,7 @@ body {
 }
 
 .active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
 }
 /*# sourceMappingURL=main.css.map */

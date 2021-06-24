@@ -1,11 +1,24 @@
 @import "_initial";
 @import "_variables";
 
-body {
-    height: 100vh;
+$icons: "facebook" #4267b2, "twitter" #1da1f2, "pinterest" #e60023;
+
+@mixin hoverColor($color) {
+    color: $color;
+}
+@mixin center {
     display: grid;
     place-items: center;
+}
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
 
+body {
+    @include center;
+
+    height: 100vh;
     background-color: $LightGB;
     font-family: $FontFamily;
     font-size: $FontSize;
@@ -16,14 +29,15 @@ body {
     height: 280px;
     position: relative;
     .box {
-        display: flex;
-        align-items: center;
+        @include flex();
         justify-content: space-between;
         padding: 10px 37px;
 
         width: 250px;
         height: 55px;
-        background: lightskyblue;
+        background: $DesaturatedDGB;
+        color: white;
+        font-weight: 100;
         position: absolute;
         top: 135px;
         right: -68px;
@@ -33,6 +47,11 @@ body {
         transition: 200ms ease;
         span {
             font-size: 1.25rem;
+            @each $name, $color in $icons {
+                .#{$name}:hover {
+                    @include hoverColor($color);
+                }
+            }
         }
 
         &::before,
@@ -42,7 +61,7 @@ body {
             position: absolute;
             top: 100%;
             left: 50%;
-            background: lightskyblue;
+            background: inherit;
             width: 11px;
             height: 16.5px;
         }
@@ -97,8 +116,7 @@ body {
         border-radius: 50%;
     }
     margin-top: 22px;
-    display: flex;
-    align-items: center;
+    @include flex;
     .btn {
         width: 32px;
         height: 32px;
@@ -121,5 +139,5 @@ body {
 // JS
 
 .active {
-    transform: scale(1);
+    transform: scale(1) !important;
 }
