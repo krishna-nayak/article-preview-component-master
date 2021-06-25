@@ -155,6 +155,9 @@ body {
   background: #ecf2f8;
   color: #6d7f97;
   border: none;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 #user-info .button:hover {

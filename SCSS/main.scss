@@ -126,6 +126,8 @@ body {
         background: $LightGB;
         color: $DesaturatedDGB;
         border: none;
+        display: grid;
+        place-items: center;
         &:hover {
             background: $DesaturatedDGB;
             color: $LightGB;
