@@ -118,7 +118,7 @@ body {
     margin-top: 22px;
     position: relative;
     @include flex;
-    .btn {
+    .button {
         width: 32px;
         height: 32px;
         border-radius: 50%;
@@ -183,7 +183,7 @@ body {
             }
         }
     }
-    .btn {
+    .button {
         position: absolute;
         z-index: 7;
         right: 0;

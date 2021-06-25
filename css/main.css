@@ -147,7 +147,7 @@ body {
   border-radius: 50%;
 }
 
-#user-info .btn {
+#user-info .button {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -157,7 +157,7 @@ body {
   border: none;
 }
 
-#user-info .btn:hover {
+#user-info .button:hover {
   background: #6d7f97;
   color: #ecf2f8;
 }
@@ -219,7 +219,7 @@ body {
   .container_article .head {
     font-size: 0.95rem;
   }
-  .btn {
+  .button {
     position: absolute;
     z-index: 7;
     right: 0;
